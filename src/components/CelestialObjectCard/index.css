@@ -1,0 +1,7 @@
+.star {
+  box-shadow: 0 0 10px #f0f0f0 !important;
+}
+
+.planet {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); !important;
+}
