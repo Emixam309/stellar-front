@@ -45,7 +45,7 @@ export const useAuthenticate = (body, isRegister) => {
           enqueueSnackbar("Unknown error", { variant: "error" })
       }
     } else {
-      if (isRegister) {
+      if (!isRegister) {
         const responseJson = await response.json()
         const jwt = responseJson.accessToken
         localStorage.setItem("jwt", jwt)

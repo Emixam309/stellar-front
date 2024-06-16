@@ -66,22 +66,16 @@ const Layout = () => {
                 Games we Want
               </Link>
             </Typography>
+            <div>
+              <Link to="/maps" style={{ textDecoration: "none", color: "unset" }}>
+                <Button color="inherit">Maps</Button>
+              </Link>
+              <Link to="/add/celestial-object" style={{ textDecoration: "none", color: "unset" }}>
+                <Button color="inherit">Add Celestial Objects</Button>
+              </Link>
+            </div>
             {userInfo ? (
               <>
-                <div>
-                  <Link to="/maps" style={{ textDecoration: "none", color: "unset" }}>
-                    <Button color="inherit">Maps</Button>
-                  </Link>
-                  <Link to="/add/celestial-object" style={{ textDecoration: "none", color: "unset" }}>
-                    <Button color="inherit">Add Celestial Objects</Button>
-                  </Link>
-                  <Link to="/edit/celestial-object" style={{ textDecoration: "none", color: "unset" }}>
-                    <Button color="inherit">Edit Celestial Objects</Button>
-                  </Link>
-                  <Link to="/add/map" style={{ textDecoration: "none", color: "unset" }}>
-                    <Button color="inherit">Add Maps</Button>
-                  </Link>
-                </div>
                 <div style={{ justifySelf: "end" }}>
                   <IconButton
                     size="large"
@@ -114,7 +108,6 @@ const Layout = () => {
               </>
             ) : (
               <>
-                <div />
                 <Button
                   sx={{ justifySelf: "end" }}
                   color="inherit"
@@ -132,7 +125,7 @@ const Layout = () => {
         <Outlet />
       </Container>
       <AppBar position="static">
-        <Toolbar>
+        <Toolbar sx={{ textAlign: "center" }}>
           <Typography sx={{ flexGrow: 1 }}>2024 – CROISIER Maxime – TREMBLAY Jérémy</Typography>
         </Toolbar>
       </AppBar>

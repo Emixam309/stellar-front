@@ -75,7 +75,7 @@ const CelestialObjectCard = ({ celestialObject = {}, isLoading = false }) => {
             )}
           </Typography>
         </CardContent>
-        {celestialObject.userId === userInfo.id && (
+        {celestialObject.userId === userInfo?.id && (
           <CardActions disableSpacing>
             <IconButton onClick={handleEdit}>
               <EditIcon />
