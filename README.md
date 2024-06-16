@@ -1,30 +1,26 @@
-<h1 align="center"> 🎮 Games We Want 🎮 </h1>
+<h1 align="center"> 🌌🚀 Stellar Web 🌠🌟 </h1>
 
-Games We Want is a web app 🌐 that provides users with information about various games 🕹️, including details on the best games and more. Users can also manage their accounts 👥 and favorites ❤️.
-
-If you have a want some information before buying a game, this is here you can find it! 🧐
+Stellar Web enables users to create, modify, and delete celestial objects like stars and planets, which can be added to maps for unique designs. Users can create accounts to start their own projects and share them publicly, fostering a collaborative and creative community around celestial visualization.
 
 ## 🚀 Features
 
-- [x] 👀 See the top games of all times, search deep inside the list using the pagination.
-- [x] 🆔 Create your own account with your personal information and authenticate you to start using all the features.  
-- [x] From here, you will be able to: 
-  - [x] 🔍 Search for particular games.
-  - [x] 📚 See detailed information about the games (reviews, description, important dates, screenshots, platforms, companies...).
-  - [x] ❤️ Manage your favorite games to easy find them on your personnale page, as well as your personnal information.
-  - [x] 🗑️ Delete your account...
-  - [x] 🎉 ...and more !
+- [x] 🆔 Create your own account with your personal information and authenticate you to start using all the features.
+- [x] From here, you will be able to:
+  - [x] 🌟 Create, edit, delete and manage stars.
+  - [x] 🌍 Create, edit, delete and manage planets.
+  - [x] ...and more !
+- [x] 🌐 Make your creations public or not if you want to let other see your work.
 
 ## 📱 Application
 
 You can use this application to see information about the games that you want. Here is a visual of some pages of the application: 
 
 <p align="center">
-    <img src="./doc/images/video_games_we_want.gif"/>
+    <img src="./doc/images/Stellarweb.png"/>
 </p>
 <p align="center" text>
     <i>
-        The current visual of the application with various pages where you can find information about games.
+        The current visual of the application with various pages where you can find information about celestial objects.
     </i>
 </p>
 
@@ -34,13 +30,11 @@ This web application may be used in many small projects to make a simple but wor
 
 * 🟦 [React 18](https://fr.legacy.reactjs.org/).
 
-> 🚧 The application uses an API hosted by someone else. The API used uses [igdb](https://www.igdb.com/) to retrieve the games data. The application may be broken at the time you launch it. Maybe a day, a permanent solution will be implemented to avoid a potential death of the application.
+> 🚧 The application uses a local API. The app use the API from [this repository](https://github.com/JeremyTremblay2/stellar-api) to retrieve the data.
 
 ## 📚 Prerequisites
 
-Currently the application is deployed with Vercel. You can find the latest deployment [here](https://games-we-want.vercel.app/) and test the application without any soft excepted a web browser. 🌐
-
-If you prefer to run it locally, the following dependencies are required:
+To run it locally, the following dependencies are required:
 
 * 🟦 [node.js 20.x](https://nodejs.org/en).
 * 🟩 [npm](https://nodejs.org/en) (included in Node).
