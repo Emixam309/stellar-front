@@ -4,9 +4,7 @@ import {
   API_BASE_URL,
   API_USER_LOGIN,
   API_USER_REGISTER,
-  API_USER_RENEW_TOKEN,
 } from "../utils/constants.js"
-import { useRefreshUserData } from "../components/UserContext"
 
 export const useAuthenticate = (body, isRegister) => {
   const [isAuthenticated, setIsAuthenticated] = useState(null)

@@ -2,16 +2,13 @@ import { useContext, useEffect, useState } from "react"
 import { Link, Outlet, useNavigate } from "react-router-dom"
 import Menu from "@mui/material/Menu"
 import { AppBar, Toolbar, Button, Container, Typography, MenuItem, IconButton } from "@mui/material"
-import Box from "@mui/material/Box"
 import AccountCircle from "@mui/icons-material/AccountCircle"
-import InputBase from "@mui/material/InputBase"
-import SearchIcon from "@mui/icons-material/Search"
 import { handleDisconnect } from "../../hooks/useAuthenticate"
 import { UserContext, useUserInfo } from "../UserContext"
 import { useIsLoading } from "../LoadingContext/index"
 import ScrollTop from "./ScrollTop"
 import LinearProgress from "@mui/material/LinearProgress"
-import { SearchContext } from "../SearchContext/index"
+import Box from "@mui/material/Box"
 
 const Layout = () => {
   const userInfo = useUserInfo()
@@ -21,8 +18,6 @@ const Layout = () => {
 
   const userContext = useContext(UserContext)
   const { isLoading } = useIsLoading()
-
-  const { searchTerm, setSearchTerm, setIsSearching } = useContext(SearchContext)
 
   useEffect(() => {
     if (userInfo === null) {
@@ -36,20 +31,8 @@ const Layout = () => {
 
   const handleClickDisconnect = () => {
     setAnchorEl(null)
-    setSearchTerm("")
     handleDisconnect(navigate)
     userContext.setRefreshUser(true)
-  }
-
-  const handleSearchChange = event => {
-    setSearchTerm(event.target.value)
-  }
-
-  const handleValidateSearch = e => {
-    e.preventDefault()
-    setIsSearching(true)
-    const searchTrimmed = searchTerm.trim()
-    if (searchTrimmed !== "") navigate("/search?q=" + searchTrimmed)
   }
 
   return (
@@ -58,12 +41,8 @@ const Layout = () => {
         <AppBar position="static" id="top-anchor">
           <Toolbar sx={{ display: "grid", gridTemplateColumns: "1fr 2fr 1fr" }}>
             <Typography variant="h6" component="div">
-              <Link
-                to="/"
-                style={{ textDecoration: "none", color: "unset" }}
-                onClick={() => setSearchTerm("")}
-              >
-                Games we Want
+              <Link to="/" style={{ textDecoration: "none", color: "unset" }}>
+                Stellar Web
               </Link>
             </Typography>
             <div>

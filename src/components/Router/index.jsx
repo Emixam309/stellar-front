@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
-import { createTheme, CssBaseline, ThemeProvider, useMediaQuery } from "@mui/material"
+import { CssBaseline, createTheme, ThemeProvider, useMediaQuery } from "@mui/material"
 import { useMemo } from "react"
 import Layout from "../Layout/index.jsx"
 import NotificationsProvider from "../Notifications/index.jsx"
@@ -7,7 +7,6 @@ import Login from "../Login/index.jsx"
 import PrivateRoute from "./PrivateRoute.jsx"
 import { UserContextProvider } from "../UserContext"
 import { LoadingContextProvider } from "../LoadingContext/index"
-import { SearchContextProvider } from "../SearchContext/index"
 import CelestialObjects from "../CelestialObjects"
 import CelestialObjectForm from "../CelestialObjectForm"
 import CelestialObjectDetails from "../CelestialObjectDetails"
@@ -99,9 +98,7 @@ export default function Router() {
       <CssBaseline />
       <NotificationsProvider prefersDarkMode={prefersDarkMode} />
       <UserContextProvider>
-        <SearchContextProvider>
-          <RouterProvider router={router} />
-        </SearchContextProvider>
+        <RouterProvider router={router} />
       </UserContextProvider>
     </ThemeProvider>
   )
